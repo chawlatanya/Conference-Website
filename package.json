@@ -15,6 +15,7 @@
   },
   "dependencies": {
     "vue": "^2.5.2",
+    "vue-auto-virtual-scroll-list": "^0.3.0-beta",
     "vue-router": "^3.0.1"
   },
   "devDependencies": {
