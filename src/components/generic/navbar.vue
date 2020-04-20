@@ -198,6 +198,8 @@ export default {
 <style lang="scss" scoped>
 .navbar{
   z-index:100;
+  top: 0;
+  left:0;
 }
 .mobile_navbar{
     background-color:#343a40;

@@ -1,22 +1,29 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import Home from '@/components/Home'
+import Header from '@/components/Header'
 import About from '@/components/About'
-import CallForPapers from '@/components/CallForPapers'
+// import CallForPapers from '@/components/CallForPapers'
+import CallForPapers from '@/pages/call-for-papers'
 import Committee from '@/components/Committee'
 import ContactUs from '@/components/ContactUs'
 import Register from '@/components/Register'
 import Schedule from '@/components/Schedule'
 import Speakers from '@/components/Speakers'
 import SupportedBy from '@/components/SupportedBy'
+import Homepage from '@/pages/index'
 
 Vue.use(Router)
 
 export default new Router({
   routes: [{
     path: '/',
-    name: 'Home',
-    component: Home
+    name: 'Homepage',
+    component: Homepage
+  },
+  {
+    path: '/header',
+    name: 'Header',
+    component: Header
   },
   {
     path: '/about',

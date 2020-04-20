@@ -181,12 +181,11 @@
         </div>
       </transition>
     </div>
-    <About id="about"></About>
+
   </div>
 </template>
 <script>
-import About from '@/components/About';
-
+import About from '@/components/About'
 
 export default {
   name: 'Home',
@@ -310,7 +309,7 @@ body {
 .description_1,
 .date {
   font-size: 1.7rem;
-  
+
 }
 .description_2 {
   font-size: 1.4rem;
@@ -383,7 +382,7 @@ button {
 .left_mobile{
   text-decoration: underline;
   text-underline-position: under;
-  font-weight: 600; 
+  font-weight: 600;
 }
 .left:before{
   content: "";

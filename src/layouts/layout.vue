@@ -6,7 +6,6 @@
         appear
       >
     <main>
-
       <slot />
     </main>
      </transition>

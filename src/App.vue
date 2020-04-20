@@ -1,27 +1,12 @@
 <template>
-  <Layout>
-    <router-view></router-view>
-    <About id="about"></About>
-    <!-- <div id="app">
-      <b> Hello</b>
-    </div> -->
-  </Layout>
+<router-view></router-view>
 </template>
 
 <script>
-import Layout from './layouts/layout.vue'
-import Home from '@/components/Home'
-import About from '@/components/About'
-import CallForPapers from '@/components/CallForPapers'
-import Committee from '@/components/Committee'
-import ContactUs from '@/components/ContactUs'
-import Register from '@/components/Register'
-import Schedule from '@/components/Schedule'
-import Speakers from '@/components/Speakers'
-import SupportedBy from '@/components/SupportedBy'
+
 export default {
-  name: 'App',
-  components: { Layout }
+  name: 'App'
+
 }
 </script>
 
@@ -31,6 +16,6 @@ export default {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #2c3e50;
+  /* color: #2c3e50; */
 }
 </style>
