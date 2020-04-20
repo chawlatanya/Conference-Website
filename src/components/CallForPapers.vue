@@ -12,7 +12,38 @@
             sessions. We seek novel paper submissions to be presented in AIST 2020 with topics 
             broadly including, but not limited to the following tracks:
         </p>
-       
+       <div class="container">
+         <div class="row">
+            <div class="col-sm-4">
+                TRACK 1
+                    <ul class="list-group">
+                            <li class="list-group-item list-group-item-light">> Speech Analysis, Representation and Models</li>
+                            <li class="list-group-item list-group-item-secondary">> Spoken Language Recognition and Understanding</li>
+                            <li class="list-group-item list-group-item-dark">Speech-to-Speech Translation</li>
+                            <li class="list-group-item list-group-item-primary">Computer Vision and Speech Recognition</li>
+                            <li class="list-group-item list-group-item-info">Speech-to-Speech Translation</li>
+                            <li class="list-group-item list-group-item-success">Affective Speech Recognition, Interpretation and Synthesis</li>
+                            <li class="list-group-item list-group-item-warning">Speech Enhancement</li>
+                            <li class="list-group-item list-group-item-danger">Speech and Language Resources - Data Collection, Transcription and Annotation</li>
+                    </ul>
+            </div>
+            <div class="col-sm-4"></div>
+            <div class="col-sm-4">TRACK 2
+                <ul class="list-group">
+                            <li class="list-group-item list-group-item-light">> Speech Analysis, Representation and Models</li>
+                            <li class="list-group-item list-group-item-secondary">> Spoken Language Recognition and Understanding</li>
+                            <li class="list-group-item list-group-item-dark">Speech-to-Speech Translation</li>
+                            <li class="list-group-item list-group-item-primary">Computer Vision and Speech Recognition</li>
+                            <li class="list-group-item list-group-item-info">Speech-to-Speech Translation</li>
+                            <li class="list-group-item list-group-item-success">Affective Speech Recognition, Interpretation and Synthesis</li>
+                            <li class="list-group-item list-group-item-warning">Speech Enhancement</li>
+                            <li class="list-group-item list-group-item-danger">Speech and Language Resources - Data Collection, Transcription and Annotation</li>
+                    </ul>
+            </div>
+
+         </div>
+        </div>
+        
     </div>
 </template>
 
@@ -34,5 +65,14 @@ h1{
 p{
     align-self: center;
     margin:40px 40px 40px;   
+}
+.CallForPapers{
+  background-image: url("https://media.giphy.com/media/c6W48VCLPF1l8Uu18A/giphy.gif"), url("https://media.giphy.com/media/c6W48VCLPF1l8Uu18A/giphy.gif");
+  background-color: #cccccc;
+  background-repeat: no-repeat;
+  background-size:cover ;
+}
+.scrollbar-near-moon {
+scrollbar-color: #b490ca #F5F5F5;
 }
 </style>
