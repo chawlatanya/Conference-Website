@@ -2,6 +2,7 @@
 <div>
   <Layout>
     <Header/>
+
     <About id="about"></About>
     <!-- <call-for-papers/> -->
   </Layout>
@@ -18,8 +19,10 @@ import Register from '@/components/Register'
 import Schedule from '@/components/Schedule'
 import Speakers from '@/components/Speakers'
 import SupportedBy from '@/components/SupportedBy'
+import Countdown from '@/components/generic/count-down'
+
 export default {
   name: 'Homepage',
-  components: {Header, About, CallForPapers, Committee, ContactUs, Register, Schedule, Speakers, SupportedBy, Layout}
+  components: {Header, About, CallForPapers, Committee, ContactUs, Register, Schedule, Speakers, SupportedBy, Layout, Countdown}
 }
 </script>
