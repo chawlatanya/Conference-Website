@@ -6,6 +6,7 @@
     <router-link to="/contact-us">Contact Us</router-link>
     <router-link to="/about">Committee</router-link>
     <router-link to="/about">Register</router-link>
+    <router-link to="/speakers">Speakers</router-link>
   </div>
 </template>
 <script>
