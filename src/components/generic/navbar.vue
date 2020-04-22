@@ -124,13 +124,13 @@
             </router-link>
           </li>
           <li class="nav-main-item">
-            <router-link to="/call-for-papers" class="nav-main-link ">
+            <router-link to="#"  v-scroll-to="'#call_for_papers' "class="nav-main-link ">
               <i class="nav-main-link-icon far fa-newspaper "></i>
               <span class="nav-main-link-name nav-item left">Call For Papers</span>
             </router-link>
           </li>
            <li class="nav-main-item">
-            <router-link to="/supported-by" class="nav-main-link ">
+            <router-link to="#"  v-scroll-to="'#supported_by'" class="nav-main-link ">
               <i class="nav-main-link-icon fa fa-user-friends"></i>
               <span class="nav-main-link-name nav-item left">Supported By</span>
             </router-link>

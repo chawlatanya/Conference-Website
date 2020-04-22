@@ -30,11 +30,11 @@ export default new Router({
     name: 'About',
     component: About
   },
-  {
-    path: '/call-for-papers',
-    name: 'CallForPapers',
-    component: CallForPapers
-  },
+  // {
+  //   path: '/call-for-papers',
+  //   name: 'CallForPapers',
+  //   component: CallForPapers
+  // },
   {
     path: '/committee',
     name: 'Committee',
@@ -58,12 +58,12 @@ export default new Router({
     path: '/speakers',
     name: 'Speakers',
     component: Speakers
-  },
-  {
-    path: '/supported-by',
-    name: 'SupportedBy',
-    component: SupportedBy
   }
+  //  {
+  //   path: '/supported-by',
+  //   name: 'SupportedBy',
+  //   component: SupportedBy
+  // }
 
   ],
   scrollBehavior (to, from, savedPosition) {
