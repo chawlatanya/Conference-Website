@@ -15,10 +15,13 @@
   },
   "dependencies": {
     "vue": "^2.5.2",
-    "vue-auto-virtual-scroll-list": "^0.3.0-beta",
-    "vue-router": "^3.0.1"
+    "vue-hamburger": "^0.1.2",
+    "vue-router": "^3.0.1",
+    "vue-scrollto": "^2.18.1",
+    "vuejs-countdown": "^0.2.1"
   },
   "devDependencies": {
+    "@fortawesome/fontawesome-free": "^5.13.0",
     "autoprefixer": "^7.1.2",
     "babel-core": "^6.22.1",
     "babel-eslint": "^8.2.1",
