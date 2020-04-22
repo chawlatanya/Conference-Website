@@ -1,80 +1,92 @@
 <template>
-<div>
-<h1 style="text-align:center;">KEYNOTE SPEAKERS</h1>
-<div class="slideshow-container">
+  <div>
+    <h1 style="text-align:center;">KEYNOTE SPEAKERS</h1>
+    <div class="slideshow-container ">
+      <div class="mySlides fade">
+        <div class="numbertext">1 / 3</div>
+        <img src="../assets/images/Satoshi.jpg" />
+        <div class="text">Caption Text</div>
+      </div>
 
-<div class="mySlides fade">
-  <div class="numbertext">1 / 3</div>
-  <img src="../assets/images/Satoshi.jpg" style="width:100%">
-  <div class="text">Caption Text</div>
-</div>
+      <div class="mySlides fade">
+        <div class="numbertext">2 / 3</div>
+        <img src="../assets/images/barbara.jpg" />
+        <div class="text">Caption Two</div>
+      </div>
 
-<div class="mySlides fade">
-  <div class="numbertext">2 / 3</div>
-  <img src="../assets/images/barbara.jpg" style="width:100%">
-  <div class="text">Caption Two</div>
-</div>
+      <div class="mySlides fade">
+        <div class="numbertext">3 / 3</div>
+        <img src="../assets/images/nemeth.jpg" />
+        <div class="text">Caption Three</div>
+      </div>
 
-<div class="mySlides fade">
-  <div class="numbertext">3 / 3</div>
-  <img src="../assets/images/nemeth.jpg" style="width:100%">
-  <div class="text">Caption Three</div>
-</div>
+      <a class="prev" @click="plusSlides(-1)">&#10094;</a>
+      <a class="next" @click="plusSlides(1)">&#10095;</a>
+    </div>
+    <br />
 
-<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-<a class="next" onclick="plusSlides(1)">&#10095;</a>
-
-</div>
-<br>
-
-<div style="text-align:center">
-  <span class="dot" onclick="currentSlide(1)"></span> 
-  <span class="dot" onclick="currentSlide(2)"></span> 
-  <span class="dot" onclick="currentSlide(3)"></span> 
-</div>
-</div>
+    <div style="text-align:center">
+      <span class="dot" @click="currentSlide(1)"></span>
+      <span class="dot" @click="currentSlide(2)"></span>
+      <span class="dot" @click="currentSlide(3)"></span>
+    </div>
+  </div>
 </template>
-
-
 
 <script>
 export default {
-  name: "Slider",
-  data() {
-var slideIndex = 1;
-showSlides(slideIndex);
+  name: 'Slider',
+  data () {
+    return {
+      slideIndex: 1
+    }
+  },
+  mounted () {
+    this.showSlides(this.slideIndex)
+  },
+  methods: {
+    plusSlides (n) {
+      this.showSlides((this.slideIndex += n))
+    },
+    currentSlide (n) {
+      this.slideIndex = n
+      this.showSlides(n)
+    },
+    showSlides (n) {
+      var i
+      var slides = document.getElementsByClassName('mySlides')
+      var dots = document.getElementsByClassName('dot')
+      if (n > slides.length) {
+        this.slideIndex = 1
+      }
+      if (n < 1) {
+        this.slideIndex = slides.length
+      }
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = 'none'
+      }
+      for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace('active', '')
+      }
+      slides[this.slideIndex - 1].style.display = 'block'
 
-function plusSlides(n) {
-  showSlides(slideIndex += n);
-}
-
-function currentSlide(n) {
-  showSlides(slideIndex = n);
-}
-
-function showSlides(n) {
-  var i;
-  var slides = document.getElementsByClassName("mySlides");
-  var dots = document.getElementsByClassName("dot");
-  if (n > slides.length) {slideIndex = 1}    
-  if (n < 1) {slideIndex = slides.length}
-  for (i = 0; i < slides.length; i++) {
-      slides[i].style.display = "none";  
+      dots[this.slideIndex - 1].className += ' active'
+    }
   }
-  for (i = 0; i < dots.length; i++) {
-      dots[i].className = dots[i].className.replace(" active", "");
-  }
-  slides[slideIndex-1].style.display = "block";  
-  dots[slideIndex-1].className += " active";
-}}}
+}
 </script>
 
+<style scoped>
+* {
+  box-sizing: border-box;
+}
 
-<style scoped> 
-* {box-sizing: border-box}
-body {font-family: Verdana, sans-serif; margin:0}
-.mySlides {display: none}
-img {vertical-align: middle;}
+.mySlides {
+  display: none;
+}
+img {
+  vertical-align: middle;
+}
 
 /* Slideshow container */
 .slideshow-container {
@@ -84,7 +96,8 @@ img {vertical-align: middle;}
 }
 
 /* Next & previous buttons */
-.prev, .next {
+.prev,
+.next {
   cursor: pointer;
   position: absolute;
   top: 50%;
@@ -106,8 +119,9 @@ img {vertical-align: middle;}
 }
 
 /* On hover, add a black background color with a little bit see-through */
-.prev:hover, .next:hover {
-  background-color: rgba(0,0,0,0.8);
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
 }
 
 /* Caption text */
@@ -142,7 +156,8 @@ img {vertical-align: middle;}
   transition: background-color 0.6s ease;
 }
 
-.active, .dot:hover {
+.active,
+.dot:hover {
   background-color: #717171;
 }
 
@@ -152,21 +167,33 @@ img {vertical-align: middle;}
   -webkit-animation-duration: 1.5s;
   animation-name: fade;
   animation-duration: 1.5s;
+  animation-fill-mode: forwards;
 }
 
 @-webkit-keyframes fade {
-  from {opacity: .4} 
-  to {opacity: 1}
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 @keyframes fade {
-  from {opacity: .4} 
-  to {opacity: 1}
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 /* On smaller screens, decrease text size */
 @media only screen and (max-width: 300px) {
-  .prev, .next,.text {font-size: 11px}
+  .prev,
+  .next,
+  .text {
+    font-size: 11px;
+  }
 }
 </style>
-
