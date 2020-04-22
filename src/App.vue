@@ -21,7 +21,7 @@ import Speakers from "@/components/Speakers";
 import SupportedBy from "@/components/SupportedBy";
 export default {
   name: "App",
-  components: { Layout }
+  components: { Layout  }
 };
 </script>
 
