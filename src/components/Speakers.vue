@@ -1,95 +1,199 @@
 <template>
-    
-
-<html lang="en">
-<div> <head>
-  <title>Bootstrap Example</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-  <script type="application/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-  <script type="application/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
- </head>
-<body>
-
-<div class="container">
-  <h2>KEYNOTE SPEAKERS</h2>
-  <div id="myCarousel" class="carousel slide" data-ride="carousel">
-    <!-- Indicators -->
-    <ol class="carousel-indicators">
-      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-      <li data-target="#myCarousel" data-slide-to="1"></li>
-      <li data-target="#myCarousel" data-slide-to="2"></li>
-    </ol>
-
-    <!-- Wrapper for slides -->
-    <div class="carousel-inner">
-
-         <div class="item">
-        <img src="../assets/images/Satoshi.jpg" alt="Satoshi" style="width:100%;">
-        <div class="carousel-caption">
-          <h3>Dr. Satoshi Nakamura</h3>
-          <p>Professor of Nara Institute of Science and Technology (NAIST)!</p>
-        </div>
+  <div>
+    <h1 style="text-align:center;">KEYNOTE SPEAKERS</h1>
+    <div class="slideshow-container ">
+      <div class="mySlides fade">
+        <div class="numbertext">1 / 3</div>
+        <img src="../assets/images/Satoshi.jpg" />
+        <div class="text">Caption Text</div>
       </div>
 
-         <div class="item active">
-        <img src="../assets/images/barbara.jpg" alt="Barbara" style="width:100%;">
-        <div class="carousel-caption">
-          <h3>Dr. Barbara Zitova</h3>
-          <p>Institute of Information Theory and Automation of the ASCR</p>
-        </div>
+      <div class="mySlides fade">
+        <div class="numbertext">2 / 3</div>
+        <img src="../assets/images/barbara.jpg" />
+        <div class="text">Caption Two</div>
       </div>
 
-      <div class="item active">
-        <img src="../assets/images/s.s.agarwal.jpg" alt="S.S.Agrawal" style="width:100%;">
-        <div class="carousel-caption">
-          <h3>Prof. S.S. Agrawal</h3>
-          <p>Emeritus Scientist, CSIR</p>
-        </div>
+      <div class="mySlides fade">
+        <div class="numbertext">3 / 3</div>
+        <img src="../assets/images/nemeth.jpg" />
+        <div class="text">Caption Three</div>
       </div>
 
-      <div class="item">
-        <img src="../assets/images/nemeth.jpg" alt="Nemeth" style="width:100%;">
-        <div class="carousel-caption">
-          <h3>Prof. Nemeth Geza</h3>
-          <p>Budapest University of Technology and Economics</p>
-        </div>
-      </div>
-       <div class="item">
-        <img src="../assets/images/amita.jpg" alt="Amita" style="width:100%;">
-        <div class="carousel-caption">
-          <h3>Dr. Amita Dev</h3>
-          <p>Vice Chancellor, IGDTUW</p>
-        </div>
-      </div>
-    
-     
-  
+      <a class="prev" @click="plusSlides(-1)">&#10094;</a>
+      <a class="next" @click="plusSlides(1)">&#10095;</a>
     </div>
+    <br />
 
-    <!-- Left and right controls -->
-    <a class="left carousel-control" href="#myCarousel" data-slide="prev">
-      <span class="glyphicon glyphicon-chevron-left"></span>
-      <span class="sr-only">Previous</span>
-    </a>
-    <a class="right carousel-control" href="#myCarousel" data-slide="next">
-      <span class="glyphicon glyphicon-chevron-right"></span>
-      <span class="sr-only">Next</span>
-    </a>
+    <div style="text-align:center">
+      <span class="dot" @click="currentSlide(1)"></span>
+      <span class="dot" @click="currentSlide(2)"></span>
+      <span class="dot" @click="currentSlide(3)"></span>
+    </div>
   </div>
-  </div>
-
-</body>
-
-</div> 
-</html>
-    
 </template>
 
 <script>
 export default {
-    name: "Speakers"
+  name: 'Slider',
+  data () {
+    return {
+      slideIndex: 1
+    }
+  },
+  mounted () {
+    this.showSlides(this.slideIndex)
+  },
+  methods: {
+    plusSlides (n) {
+      this.showSlides((this.slideIndex += n))
+    },
+    currentSlide (n) {
+      this.slideIndex = n
+      this.showSlides(n)
+    },
+    showSlides (n) {
+      var i
+      var slides = document.getElementsByClassName('mySlides')
+      var dots = document.getElementsByClassName('dot')
+      if (n > slides.length) {
+        this.slideIndex = 1
+      }
+      if (n < 1) {
+        this.slideIndex = slides.length
+      }
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = 'none'
+      }
+      for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace('active', '')
+      }
+      slides[this.slideIndex - 1].style.display = 'block'
+
+      dots[this.slideIndex - 1].className += ' active'
+    }
+  }
 }
 </script>
 
+<style scoped>
+* {
+  box-sizing: border-box;
+}
+
+.mySlides {
+  display: none;
+}
+img {
+  vertical-align: middle;
+}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active,
+.dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+  animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .prev,
+  .next,
+  .text {
+    font-size: 11px;
+  }
+}
+</style>

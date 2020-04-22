@@ -8,8 +8,8 @@ import ContactUs from '@/components/ContactUs'
 import Register from '@/components/Register'
 import Schedule from '@/components/Schedule'
 
-// import Speakers from '@/components/speakertest2'
-import Speakers from '@/components/Speakers'
+
+ import Speakers from '@/components/Speakers'
 import SupportedBy from '@/components/SupportedBy'
 
 Vue.use(Router)
