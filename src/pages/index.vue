@@ -2,7 +2,8 @@
 <div>
   <Layout>
     <Header/>
-    <!-- <About id="about"></About> -->
+    <about id="about"></about>
+    <!-- <speakers id="speakers"/> -->
     <call-for-papers id="call_for_papers"/>
     <supported-by id="supported_by"/>
   </Layout>

@@ -113,13 +113,22 @@
             </router-link>
           </li>
           <li class="nav-main-item">
-            <router-link to="#" v-scroll-to="'#about'" class="nav-main-link ">
+            <router-link to="#" v-scroll-to="{
+                el: '#about',
+                duration: 500,
+                easing: 'ease',
+                offset: -70,
+                force: true,
+                cancelable: true,
+                x: false,
+                y: true
+              }" class="nav-main-link ">
               <i class="nav-main-link-icon fa fa-info-circle"></i>
               <span class="nav-main-link-name nav-item left">About</span>
             </router-link>
           </li>
           <li class="nav-main-item">
-            <router-link to="/speakers" class="nav-main-link ">
+            <router-link to="#" v-scroll-to="'#speakers'" class="nav-main-link ">
               <i class="nav-main-link-icon fa fa-user-tie"></i>
               <span class="nav-main-link-name nav-item left">Speakers</span>
             </router-link>
@@ -131,7 +140,7 @@
                 el: '#call_for_papers',
                 duration: 500,
                 easing: 'ease',
-                offset: -75,
+                offset: -70,
                 force: true,
                 cancelable: true,
                 x: false,

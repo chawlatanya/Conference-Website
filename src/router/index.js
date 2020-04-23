@@ -25,16 +25,16 @@ export default new Router({
     name: 'Header',
     component: Header
   },
-  {
-    path: '/about',
-    name: 'About',
-    component: About
-  },
-  // {
-  //   path: '/call-for-papers',
-  //   name: 'CallForPapers',
-  //   component: CallForPapers
-  // },
+    // {
+    //   path: '/about',
+    //   name: 'About',
+    //   component: About
+    // },
+    // {
+    //   path: '/call-for-papers',
+    //   name: 'CallForPapers',
+    //   component: CallForPapers
+    // },
   {
     path: '/committee',
     name: 'Committee',
@@ -53,17 +53,17 @@ export default new Router({
     path: '/schedule',
     name: 'Schedule',
     component: Schedule
-  },
-  {
-    path: '/speakers',
-    name: 'Speakers',
-    component: Speakers
   }
-  //  {
-  //   path: '/supported-by',
-  //   name: 'SupportedBy',
-  //   component: SupportedBy
-  // }
+    // {
+    //   path: '/speakers',
+    //   name: 'Speakers',
+    //   component: Speakers
+    // }
+    //  {
+    //   path: '/supported-by',
+    //   name: 'SupportedBy',
+    //   component: SupportedBy
+    // }
 
   ],
   scrollBehavior (to, from, savedPosition) {
