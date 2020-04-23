@@ -48,11 +48,6 @@
               </p>
             </div>
           </div>
-          <div
-            class="mt-3 countdown_mobile d-flex flex-row align-items-center justify-content-center"
-          >
-            <Countdown class="" />
-          </div>
         </div>
         <div v-else>
           <div class="dates d-flex flex-column">
@@ -101,54 +96,53 @@
       class="header_wrapper d-none d-md-flex flex-column justify-content-center"
     >
       <transition name="slide" mode="out-in">
-        <div
-          class="main-slide d-flex flex-column container align-items-center"
-          v-if="main_slide"
-          :key="main_slide"
-        >
-          <div class="header d-flex flex-column p-3 my-6 ">
-            <div class="heading">
-              <span data-text="A">A</span>
-              <span data-text="I">I</span>
-              <span data-text="S">S</span>
-              <span data-text="T">T</span>
-              <span data-text="">&nbsp;</span>
-              <span data-text="2">2</span>
-              <span data-text="0">0</span>
-              <span data-text="2">2</span>
-              <span data-text="0">0</span>
+        <div class="" v-if="main_slide" :key="main_slide">
+          <div class="header d-flex flex-column ">
+            <div class="">
+              <div class="heading">
+                <span data-text="A">A</span>
+                <span data-text="I">I</span>
+                <span data-text="S">S</span>
+                <span data-text="T">T</span>
+                <span data-text="">&nbsp;</span>
+                <span data-text="2">2</span>
+                <span data-text="0">0</span>
+                <span data-text="2">2</span>
+                <span data-text="0">0</span>
+              </div>
+              <div class="description">
+                <div class="description_1">
+                  (2nd International Conference On Artificial Intelligence And
+                  Speech Technology)
+                </div>
+                <div class="description_2">
+                  @ Indira Gandhi Delhi Technical University for Women, Kashmere
+                  Gate, Delhi
+                </div>
+                <div class="date">
+                  19th - 20th November, 2020
+                </div>
+              </div>
             </div>
-            <div class="heading d-none">
-              AIST 2020
+            <div class="mt-2">
+              <div class="d-flex flex-row w-100 justify-content-around">
+                <div class="submit_papers_cta">
+                  <button type="button" class="btn btn-primary">
+                    Submit Your Paper
+                  </button>
+                </div>
+                <div class="dates_cta" @click="main_slide = !main_slide">
+                  <p class="left">
+                    Important Dates <i class="fas fa-arrow-right"></i>
+                  </p>
+                </div>
+              </div>
+              <div
+                class="countdown d-flex flex-row align-items-center justify-content-center"
+              >
+                <Countdown class="" />
+              </div>
             </div>
-            <div class="description_1 mt-5">
-              (2nd International Conference On Artificial Intelligence And
-              Speech Technology)
-            </div>
-            <div class="description_2">
-              @ Indira Gandhi Delhi Technical University for Women, Kashmere
-              Gate, Delhi
-            </div>
-            <div class="date">
-              19th - 20th November, 2020
-            </div>
-          </div>
-          <div class="d-flex flex-row w-100 justify-content-around">
-            <div class="submit_papers_cta">
-              <button type="button" class="btn btn-primary">
-                Submit Your Paper
-              </button>
-            </div>
-            <div class="dates_cta" @click="main_slide = !main_slide">
-              <p class="left">
-                Important Dates <i class="fas fa-arrow-right"></i>
-              </p>
-            </div>
-          </div>
-          <div
-            class="mt-3 countdown d-flex flex-row align-items-center justify-content-center"
-          >
-            <Countdown class="" />
           </div>
         </div>
         <div v-else>
@@ -201,22 +195,36 @@
 <script>
 import About from '@/components/About'
 import Countdown from '@/components/generic/count-down'
+
 export default {
   name: 'Home',
   data () {
     return {
-      main_slide: true
+      main_slide: true,
+      loadCountdown: false
     }
   },
-  components: { About, Countdown }
+  components: { About, Countdown },
+  mounted () {
+    setTimeout(this.setLoadCountdown, 2000)
+  },
+  methods: {
+    setLoadCountdown () {
+      this.loadCountdown = true
+    }
+  },
+  watch: {
+    main_slide () {
+      console.log('main_slide watched')
+      if (this.main_slide === true) {
+        setTimeout(this.setLoadCountdown, 2000)
+      }
+    }
+  }
 }
 </script>
 <style lang="scss">
-.countdown_mobile {
-  color: white;
-}
 .countdown {
-  color: white;
   .digit,
   li:after {
     font-size: 3rem !important ;

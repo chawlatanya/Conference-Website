@@ -2,33 +2,95 @@
   <div>
     <h1 style="text-align:center;">KEYNOTE SPEAKERS</h1>
     <div class="slideshow-container ">
-      <div class="mySlides fade">
-        <div class="numbertext">1 / 3</div>
-        <img src="../assets/images/Satoshi.jpg" />
-        <div class="text">Caption Text</div>
+      <div class="mySlides fade ">
+        <div class="d-flex flex-row justify-content-around">
+          <!-- <img
+            src="../assets/images/Satoshi.jpg"
+             width="200rem" height="200rem"
+          /> -->
+          <div
+            class="card"
+            style="width: 18rem;"
+          >
+           <img class="" src="../assets/images/Satoshi.jpg"  alt="Card image cap">
+            <div class="card-body  d-flex flex-column justify-content-center">
+              <h5 class="card-title">Dr. Satoshi Nakamura</h5>
+              <p class="card-text text-muted"> Professor of Nara Institute of Science and Technology (NAIST)</p>
+            </div>
+          </div>
+        </div>
+
       </div>
 
       <div class="mySlides fade">
-        <div class="numbertext">2 / 3</div>
-        <img src="../assets/images/barbara.jpg" />
-        <div class="text">Caption Two</div>
+        <div class="d-flex flex-row justify-content-around">
+          <!-- <img
+            src="../assets/images/barbara.jpg"
+            width="200rem" height="200rem"
+          /> -->
+          <div
+            class="card"
+            style="width: 18rem;"
+          >
+           <img class=""
+            src="../assets/images/barbara.jpg"
+
+          />
+            <div class="card-body d-flex flex-column justify-content-center">
+              <h5 class="card-title">Dr. Barbara Zitova</h5>
+              <p class="card-text text-muted">Institute of Information Theory and Automation of the ASCR</p>
+            </div>
+          </div>
+        </div>
       </div>
 
       <div class="mySlides fade">
-        <div class="numbertext">3 / 3</div>
-        <img src="../assets/images/nemeth.jpg" />
-        <div class="text">Caption Three</div>
+        <div class="d-flex flex-row justify-content-around">
+          <!-- <img
+            src="../assets/images/nemeth.jpg"
+             width="200rem" height="200rem"
+          /> -->
+          <div
+            class="card"
+            style="width: 18rem;"
+          >
+          <img
+            src="../assets/images/nemeth.jpg"
+
+          />
+            <div class="card-body  d-flex flex-column justify-content-center">
+              <h5 class="card-title">Prof. Nemeth Geza</h5>
+              <p class="card-text text-muted">Budapest University of Technology and Economics</p>
+            </div>
+          </div>
+        </div>
+
       </div>
 
-      <a class="prev" @click="plusSlides(-1)">&#10094;</a>
-      <a class="next" @click="plusSlides(1)">&#10095;</a>
+      <a
+        class="prev "
+        @click="plusSlides(-1)"
+      >&#10094;</a>
+      <a
+        class="next"
+        @click="plusSlides(1)"
+      >&#10095;</a>
     </div>
     <br />
 
     <div style="text-align:center">
-      <span class="dot" @click="currentSlide(1)"></span>
-      <span class="dot" @click="currentSlide(2)"></span>
-      <span class="dot" @click="currentSlide(3)"></span>
+      <span
+        class="dot"
+        @click="currentSlide(1)"
+      ></span>
+      <span
+        class="dot"
+        @click="currentSlide(2)"
+      ></span>
+      <span
+        class="dot"
+        @click="currentSlide(3)"
+      ></span>
     </div>
   </div>
 </template>
@@ -46,6 +108,7 @@ export default {
   },
   methods: {
     plusSlides (n) {
+
       this.showSlides((this.slideIndex += n))
     },
     currentSlide (n) {
@@ -195,5 +258,8 @@ img {
   .text {
     font-size: 11px;
   }
+}
+.card img{
+  height: 15rem;
 }
 </style>

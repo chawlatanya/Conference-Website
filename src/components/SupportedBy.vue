@@ -1,11 +1,11 @@
 <template>
   <div class="SupportedBy">
-    <h1>Supported By</h1>
+    <h1>SUPPORTED BY</h1>
     <div class="container">
     <div class="row">
       <div class="col-md-4 fp">
         <div class="thumbnail" >
-          <a href="../assets/images/anveshan.png">
+          <!-- <a href="../assets/images/anveshan.png"> -->
             <img
               src="../assets/images/anveshan.png"
               alt="Anveshan"
@@ -14,22 +14,22 @@
             <div class="caption mt-2">
               <p>ANVESHAN FOUNDATION</p>
             </div>
-          </a>
+          <!-- </a> -->
         </div>
       </div>
       <div class="col-md-4 fp" >
         <div class="thumbnail">
-          <a href="../assets/images/ieee.png">
+          <!-- <a href="../assets/images/ieee.png"> -->
             <img src="../assets/images/ieee.png" alt="ieee" class="rounded" />
             <div class="caption  mt-2">
               <p>IEEE</p>
             </div>
-          </a>
+          <!-- </a> -->
         </div>
       </div>
       <div class="col-md-4 fp">
         <div class="thumbnail" text-animation="bounce">
-          <a href="../assets/images/acm.png">
+          <!-- <a href="../assets/images/acm.png"> -->
             <img
               src="../assets/images/acm.png"
               alt="acm"
@@ -38,7 +38,7 @@
             <div class="caption  mt-2">
               <p>ACM CHAPTER</p>
             </div>
-          </a>
+          <!-- </a> -->
         </div>
       </div>
     </div>
@@ -56,14 +56,14 @@ export default {
 h1 {
   text-align: center;
 
-  color: white;
+  /* color: white; */
 }
 p {
   align-self: center;
-  color: white;
+  /* color: white; */
 }
 .SupportedBy {
-  background-image: url("../assets/images/grey.jpg");
+  /* background-image: url("../assets/images/grey.jpg"); */
   background-repeat: no-repeat;
   background-size: cover;
 }

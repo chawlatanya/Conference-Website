@@ -2,7 +2,7 @@
   <div class="d-flex flex-row justify-content-center">
     <div class="col-md-6">
       <form class="d-flex flex-column align-items-center">
-        <h3>CONTACT FORM</h3>
+        <h3 class="heading">CONTACT US</h3>
         <div class="container">
           <label for="uname"><b>Username</b></label>
           <input
@@ -84,5 +84,21 @@ button {
 /* Add a hover effect for buttons */
 button:hover {
   opacity: 0.8;
+}
+.heading{
+  font-size: 2.3rem;
+  font-family: Avenir,
+     -apple-system,
+     BlinkMacSystemFont,
+     Segoe UI,
+     Roboto,
+     Helvetica Neue,
+     Arial,
+     Noto Sans,
+     sans-serif,
+     Apple Color Emoji,
+     Segoe UI Emoji,
+     Segoe UI Symbol,
+     Noto Color Emoji !important;
 }
 </style>

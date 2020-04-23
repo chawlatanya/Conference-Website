@@ -1,13 +1,13 @@
 <template>
   <div>
-    <Countdown end="August 22, 2022"></Countdown>
+    <Countdown end="November 19, 2020"></Countdown>
   </div>
 </template>
 <script>
 import Countdown from 'vuejs-countdown'
 
 export default {
-  name:'Countdown',
+  name: 'CountDown',
   components: { Countdown }
 }
 </script>

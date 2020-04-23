@@ -141,11 +141,11 @@ export default {
 p {
   align-self: center;
   text-indent: center;
-  color: white;
+  /* color: white; */
 }
 .heading{
   text-align: center;
-  color: whitesmoke;
+  /* color: whitesmoke; */
   font-family: Avenir,
      -apple-system,
      BlinkMacSystemFont,
@@ -161,9 +161,9 @@ p {
      Noto Color Emoji !important;
 }
 .CallForPapers {
-  background-image: url("https://media.giphy.com/media/fC6BAcnLFF2o/giphy.gif"),
-    url("https://media.giphy.com/media/fC6BAcnLFF2o/giphy.gif");
-  background-color: #cccccc;
+  /* background-image: url("https://media.giphy.com/media/fC6BAcnLFF2o/giphy.gif"),
+    url("https://media.giphy.com/media/fC6BAcnLFF2o/giphy.gif"); */
+  /* background-color: #cccccc; */
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -175,7 +175,7 @@ p {
   font-size:1.2rem;
 }
 #col1,#col2 {
-  color: white;
+  /* color: white; */
 }
 .description{
   text-align: justify;

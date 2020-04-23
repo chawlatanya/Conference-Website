@@ -1,6 +1,6 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import Header from '@/components/Header'
+import Header from '@/components/header_test'
 import About from '@/components/About'
 // import CallForPapers from '@/components/CallForPapers'
 import CallForPapers from '@/pages/call-for-papers'
