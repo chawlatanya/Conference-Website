@@ -6,6 +6,7 @@
     <!-- <speakers id="speakers"/> -->
     <call-for-papers id="call_for_papers"/>
     <supported-by id="supported_by"/>
+    <contact-us id="contact_us"/>
   </Layout>
 </div>
 </template>

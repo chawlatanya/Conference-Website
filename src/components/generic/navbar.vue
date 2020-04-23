@@ -43,19 +43,19 @@
             </router-link>
           </li>
           <li class="nav-main-item">
-            <router-link to="/speakers" class="nav-main-link ">
+            <router-link to="#" v-scroll-to="'speakers'" class="nav-main-link ">
               <i class="nav-main-link-icon fa fa-user-tie"></i>
               <span class="nav-main-link-name nav-item ">Speakers</span>
             </router-link>
           </li>
           <li class="nav-main-item">
-            <router-link to="/call-for-papers" class="nav-main-link ">
+            <router-link to="#" v-scroll-to="'#call_for_papers'" class="nav-main-link ">
               <i class="nav-main-link-icon far fa-newspaper "></i>
               <span class="nav-main-link-name nav-item ">Call For Papers</span>
             </router-link>
           </li>
           <li class="nav-main-item">
-            <router-link to="/supported-by" class="nav-main-link ">
+            <router-link to="#" v-scroll-to="'#supported_by'" class="nav-main-link ">
               <i class="nav-main-link-icon fa fa-user-friends"></i>
               <span class="nav-main-link-name nav-item ">Supported By</span>
             </router-link>
@@ -73,7 +73,7 @@
             </router-link>
           </li>
           <li class="nav-main-item">
-            <router-link to="/contact-us" class="nav-main-link ">
+            <router-link to="/#" v-scroll-to="'contact_us'" class="nav-main-link ">
               <i class="nav-main-link-icon fa fa-mail-bulk"></i>
               <span class="nav-main-link-name nav-item ">Contact Us</span>
             </router-link>
@@ -177,7 +177,16 @@
             </router-link>
           </li>
           <li class="nav-main-item">
-            <router-link to="/contact-us" class="nav-main-link ">
+            <router-link to="#" v-scroll-to="{
+                el: '#contact_us',
+                duration: 500,
+                easing: 'ease',
+                offset: -75,
+                force: true,
+                cancelable: true,
+                x: false,
+                y: true
+              }" class="nav-main-link ">
               <i class="nav-main-link-icon fa fa-mail-bulk"></i>
               <span class="nav-main-link-name nav-item left">Contact Us</span>
             </router-link>

@@ -39,11 +39,12 @@ export default new Router({
     path: '/committee',
     name: 'Committee',
     component: Committee
-  }, {
-    path: '/contact-us',
-    name: 'ContactUs',
-    component: ContactUs
-  },
+  }, 
+  // {
+  //   path: '/contact-us',
+  //   name: 'ContactUs',
+  //   component: ContactUs
+  // },
   {
     path: '/register',
     name: 'Register',
