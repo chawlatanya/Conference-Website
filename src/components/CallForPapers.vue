@@ -1,140 +1,170 @@
 <template>
-  <div class="CallForPapers">
-    <div class="d-flex flex-column align-items-center CallForPapers">
-    <h1 class="heading">CALL FOR PAPERS</h1>
-    <p class="col-md-10 description">
-      AIST 2020 is dedicated to cutting edge research that addresses scientific
-      needs of academic researchers and industrial professionals to explore new
-      horizons of knowledge related to Artificial Intelligence and Speech
-      Technologies. AIST 2020 is scheduled to include high-quality paper
-      presentation sessions revealing the latest research findings, and to
-      engage participants in interesting discussion sessions. We seek novel
-      paper submissions to be presented in AIST 2020 with topics broadly
-      including, but not limited to the following tracks:
-    </p>
+  <div class="">
+    <div class="d-md-flex">
+      <div class="d-md-flex flex-md-column col-md-4">
+        <h1 class="heading">Call For Papers</h1>
+        <p class="description">
+          AIST 2020 is dedicated to cutting edge research that addresses
+          scientific needs of academic researchers and industrial professionals
+          to explore new horizons of knowledge related to Artificial
+          Intelligence and Speech Technologies. AIST 2020 is scheduled to
+          include high-quality paper presentation sessions revealing the latest
+          research findings, and to engage participants in interesting
+          discussion sessions. We seek novel paper submissions to be presented
+          in AIST 2020 with topics broadly including, but not limited to the
+          these tracks
+          <img src="../assets/images/right_arrow.svg" class="arrow" />
+        </p>
+      </div>
+      <div class="d-md-flex justify-content-between col-md-7 offset-md-1 mb-6">
+        <div
+          class="d-flex flex-row flex-md-column justify-content-start mr-md-3 position-relative"
+        >
+          <button
+            type="button"
+            class="btn btn-primary position-absolute btn1"
+            @click="toggleTrack(1)"
+          >
+            Track&nbsp;1
+          </button>
+          <button
+            type="button"
+            class="btn btn-primary position-absolute btn2"
+            @click="toggleTrack(2)"
+          >
+            Track&nbsp;2
+          </button>
+        </div>
 
-    <div class="container">
-      <div class="row">
-        <div class="col-md-6" id="col1">
-          <div class="track mb-2">TRACK 1</div>
-          <ul class="list-group">
+        <div class="mt-md-2 offset-md-3" v-if="activeTrack === 1">
+          <div class="track mb-md-2">TRACK 1</div>
+          <ul class="list-group ht-fix">
             <li class="list-group-item list-group-item-light">
-              > Speech Analysis, Representation and Models
+              Speech Analysis, Representation and Models
             </li>
             <li class="list-group-item list-group-item-secondary">
-              > Spoken Language Recognition and Understanding
+              Spoken Language Recognition and Understanding
             </li>
             <li class="list-group-item list-group-item-dark">
-              > Speech-to-Speech Translation
+              Speech-to-Speech Translation
             </li>
             <li class="list-group-item list-group-item-primary">
-              > Computer Vision and Speech Recognition
+              Computer Vision and Speech Recognition
             </li>
             <li class="list-group-item list-group-item-info">
-              > Speech-to-Speech Translation
+              Speech-to-Speech Translation
             </li>
             <li class="list-group-item list-group-item-success">
-              > Affective Speech Recognition, Interpretation and Synthesis
+              Affective Speech Recognition, Interpretation and Synthesis
             </li>
             <li class="list-group-item list-group-item-warning">
-              > Speech Enhancement
+              Speech Enhancement
             </li>
             <li class="list-group-item list-group-item-danger">
-              > Speech and Language Resources - Data Collection, Transcription
-              and Annotation
+              Speech and Language Resources - Data Collection, Transcription and
+              Annotation
             </li>
             <li class="list-group-item list-group-item-light">
-              > Speech Interface Design and Human Factors Engineering
+              Speech Interface Design and Human Factors Engineering
             </li>
             <li class="list-group-item list-group-item-secondary">
-              > Computational Resource Constrained Speech
+              Computational Resource Constrained Speech
             </li>
             <li class="list-group-item list-group-item-dark">
-              > Spoken Dialogue Systems
+              Spoken Dialogue Systems
             </li>
             <li class="list-group-item list-group-item-primary">
-              > Human Computer Interaction
+              Human Computer Interaction
             </li>
             <li class="list-group-item list-group-item-info">
-              > Assistive Technologies
+              Assistive Technologies
             </li>
             <li class="list-group-item list-group-item-success">
-              > Forensic Speech Investigations and Security Systems
+              Forensic Speech Investigations and Security Systems
             </li>
             <li class="list-group-item list-group-item-warning">
-              > Speech Enhancement
+              Speech Enhancement
             </li>
             <li class="list-group-item list-group-item-danger">
-              > Speech and Language Resources - Data Collection, Transcription
-              and Annotation
+              Speech and Language Resources - Data Collection, Transcription and
+              Annotation
             </li>
           </ul>
         </div>
-        <div class="col-md-6" id="col2">
-          <div class="track mb-2">TRACK 2</div>
-          <ul class="list-group">
+        <div class="mt-md-2 offset-md-3" v-else>
+          <div class="track mb-md-2">TRACK 2</div>
+          <ul class="list-group ht-fix">
             <li class="list-group-item list-group-item-light">
-              > Speech Analysis, Representation and Models
+              AI Algorithms Artificial Intelligence tools & Applications
             </li>
             <li class="list-group-item list-group-item-secondary">
-              > Spoken Language Recognition and Understanding
+              Foundations of Artificial Intelligence
             </li>
             <li class="list-group-item list-group-item-dark">
-              > Speech-to-Speech Translation
+              Philosophy and Artificial Intelligence
             </li>
             <li class="list-group-item list-group-item-primary">
-              > Computer Vision and Speech Recognition
+              Bayesian Networks
             </li>
             <li class="list-group-item list-group-item-info">
-              > Speech-to-Speech Translation
+              Cognitive Science
             </li>
             <li class="list-group-item list-group-item-success">
-              > Affective Speech Recognition, Interpretation and Synthesis
+              Natural Language Processing
             </li>
             <li class="list-group-item list-group-item-warning">
-              > Speech Enhancement
+              Parallel Processing; Pattern Recognition; Programming Languages
             </li>
             <li class="list-group-item list-group-item-danger">
-              > Speech and Language Resources - Data Collection, Transcription
-              and Annotation
+              Speech and Language Resources - Data Collection, Transcription and
+              Annotation
             </li>
             <li class="list-group-item list-group-item-light">
-              > Speech Interface Design and Human Factors Engineering
+              Intelligent System Architectures; Intelligent Web
             </li>
             <li class="list-group-item list-group-item-secondary">
-              > Computational Resource Constrained Speech
+              Computational Resource Constrained Speech
             </li>
             <li class="list-group-item list-group-item-dark">
-              > Spoken Dialogue Systems
+              DNA Computing and Quantum Computing
             </li>
             <li class="list-group-item list-group-item-primary">
-              > Human Computer Interaction
+              Human Computer Interaction
             </li>
             <li class="list-group-item list-group-item-info">
-              > Assistive Technologies
+              Assistive Technologies
             </li>
             <li class="list-group-item list-group-item-success">
-              > Forensic Speech Investigations and Security Systems
+              Forensic Speech Investigations and Security Systems
             </li>
             <li class="list-group-item list-group-item-warning">
-              > Speech Enhancement
+              Speech Enhancement
             </li>
             <li class="list-group-item list-group-item-danger">
-              > Speech and Language Resources - Data Collection, Transcription
-              and Annotation
+              Speech and Language Resources - Data Collection, Transcription and
+              Annotation
             </li>
           </ul>
         </div>
       </div>
     </div>
   </div>
-  </div>
 </template>
 
 <script>
 export default {
-  name: 'CallForPapers'
-}
+  name: "CallForPapers",
+  data() {
+    return {
+      activeTrack: 1
+    };
+  },
+  methods: {
+    toggleTrack(track) {
+      if (track !== this.activeTrack) this.activeTrack = track;
+    }
+  }
+};
 </script>
 
 <style scoped>
@@ -143,45 +173,73 @@ p {
   text-indent: center;
   /* color: white; */
 }
-.heading{
-  text-align: center;
-  /* color: whitesmoke; */
-  font-family: Avenir,
-     -apple-system,
-     BlinkMacSystemFont,
-     Segoe UI,
-     Roboto,
-     Helvetica Neue,
-     Arial,
-     Noto Sans,
-     sans-serif,
-     Apple Color Emoji,
-     Segoe UI Emoji,
-     Segoe UI Symbol,
-     Noto Color Emoji !important;
-}
-.CallForPapers {
-  /* background-image: url("https://media.giphy.com/media/fC6BAcnLFF2o/giphy.gif"),
-    url("https://media.giphy.com/media/fC6BAcnLFF2o/giphy.gif"); */
-  /* background-color: #cccccc; */
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-.scrollbar-near-moon {
-  scrollbar-color: #b490ca #f5f5f5;
-}
-.track{
+
+.track {
   font-weight: 700;
-  font-size:1.2rem;
+  font-size: 1.2rem;
 }
-#col1,#col2 {
-  /* color: white; */
-}
-.description{
+
+.description {
   text-align: justify;
-  font-size:1.3rem;
+  font-size: 1rem;
 }
 .list-group {
   margin-bottom: 10px;
+}
+button {
+  padding: 15px;
+  outline: none;
+  border: none;
+  -webkit-appearance: none;
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+  &:disabled {
+    opacity: 0.2;
+    cursor: no-drop;
+  }
+}
+.btn.btn-primary {
+  color: #fff;
+  background-color: #7a7a7a;
+  border-color: #7a7a7a;
+  box-shadow: 0.15s ease-in-out !important;
+  cursor: pointer;
+}
+.btn.btn-primary:hover {
+  -webkit-transform: translateY(-1px);
+  transform: translateY(-1px);
+  box-shadow: 0 7px 14px rgba(50, 50, 93, 0.1), 0 3px 6px rgba(0, 0, 0, 0.08);
+  color: #fff;
+  background-color: #666666;
+  border-color: #666666;
+}
+.ht-fix {
+  height: 300px;
+  overflow-y: scroll;
+}
+.btn.btn-primary {
+  padding: 0.1rem 3rem;
+}
+.btn1 {
+  top: 14%;
+  z-index: 2;
+}
+.btn2 {
+  top: 50%;
+  z-index: 2;
+}
+@media screen and (max-width: 600px) {
+  .btn1 {
+    top: 350px;
+    left: 0%;
+  }
+  .btn2 {
+    top: 350px;
+    left: 56%;
+  }
+}
+.arrow {
+  display: inline-block;
 }
 </style>

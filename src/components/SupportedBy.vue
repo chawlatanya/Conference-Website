@@ -1,65 +1,59 @@
 <template>
-  <div class="SupportedBy">
-    <h1>SUPPORTED BY</h1>
-    <div class="container">
-    <div class="row">
-      <div class="col-md-4 fp">
-        <div class="thumbnail" >
-          <!-- <a href="../assets/images/anveshan.png"> -->
-            <img
-              src="../assets/images/anveshan.png"
-              alt="Anveshan"
-              class="rounded"
-            />
-            <div class="caption mt-2">
-              <p>ANVESHAN FOUNDATION</p>
-            </div>
-          <!-- </a> -->
-        </div>
-      </div>
-      <div class="col-md-4 fp" >
-        <div class="thumbnail">
-          <!-- <a href="../assets/images/ieee.png"> -->
-            <img src="../assets/images/ieee.png" alt="ieee" class="rounded" />
-            <div class="caption  mt-2">
-              <p>IEEE</p>
-            </div>
-          <!-- </a> -->
-        </div>
-      </div>
-      <div class="col-md-4 fp">
-        <div class="thumbnail" text-animation="bounce">
-          <!-- <a href="../assets/images/acm.png"> -->
-            <img
-              src="../assets/images/acm.png"
-              alt="acm"
-              class="rounded"
-            />
-            <div class="caption  mt-2">
-              <p>ACM CHAPTER</p>
-            </div>
-          <!-- </a> -->
-        </div>
-      </div>
+  <div class="px-md-0">
+    <div class="">
+      <h1>Supported By</h1>
     </div>
+    <div class="d-md-flex justify-content-around px-5">
+      <div class="col-md-3 d-flex flex-column">
+        <img
+          src="../assets/images/anveshan.png"
+          alt="Anveshan"
+          class="rounded-circle"
+          width="200"
+        />
+        <div class="caption mt-4 ">
+          <p>ANVESHAN FOUNDATION</p>
+        </div>
+        <!-- </a> -->
+      </div>
+
+      <div class="col-md-3 d-flex flex-column ">
+        <img
+          src="../assets/images/ieee.png"
+          alt="ieee"
+          class="rounded-circle"
+          width="200"
+        />
+        <div class="caption  align-self-center mr-md-6 pr-md-2 mt-4">
+          <p>IEEE</p>
+        </div>
+      </div>
+      <div class="col-md-3 d-flex flex-column">
+        <img
+          src="../assets/images/acm.png"
+          alt="acm"
+          class="rounded-circle"
+          width="200"
+        />
+        <div class="caption align-self-center mr-md-6 mr-2 pr-3 pr-md-2 mt-4">
+          <p>ACM CHAPTER</p>
+        </div>
+      </div>
     </div>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'SupportedBy'
-}
+  name: "SupportedBy"
+};
 </script>
 
 <style scoped>
 h1 {
-  text-align: center;
-
   /* color: white; */
 }
 p {
-  align-self: center;
   /* color: white; */
 }
 .SupportedBy {
@@ -72,23 +66,13 @@ p {
 }
 
 .fp {
-  align-content: right;
-  text-align: center;
+  /* align-content: right;
+  text-align: center; */
 }
-.caption{
-font-weight:600;
-font-family: Avenir,
-     -apple-system,
-     BlinkMacSystemFont,
-     Segoe UI,
-     Roboto,
-     Helvetica Neue,
-     Arial,
-     Noto Sans,
-     sans-serif,
-     Apple Color Emoji,
-     Segoe UI Emoji,
-     Segoe UI Symbol,
-     Noto Color Emoji !important;
+.caption {
+  font-weight: 600;
+  font-family: Avenir, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
+    Helvetica Neue, Arial, Noto Sans, sans-serif, Apple Color Emoji,
+    Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji !important;
 }
 </style>

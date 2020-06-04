@@ -14,7 +14,9 @@
     "build": "node build/build.js"
   },
   "dependencies": {
+    "swiper": "^5.4.1",
     "vue": "^2.5.2",
+    "vue-custom-scrollbar": "^1.2.0",
     "vue-hamburger": "^0.1.2",
     "vue-router": "^3.0.1",
     "vue-scrollto": "^2.18.1",

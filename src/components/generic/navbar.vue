@@ -1,7 +1,9 @@
 <template>
   <div class="position-fixed navbar w-100">
     <div class="d-md-none">
-      <div class="py-3 px-4 d-flex justify-content-between align-items-center mobile_navbar">
+      <div
+        class="py-3 px-4 d-flex justify-content-between align-items-center mobile_navbar"
+      >
         <div class="d-flex flex-row align-items-center">
           <div class="conference-logo">
             <img
@@ -12,33 +14,25 @@
           </div>
           <div class="mobile_nav_heading ml-3">AIST 2020</div>
         </div>
-        <div
-          class="burger_menu"
-          @click="handleHamburgerClick"
-        >
-          <hamburger
-            :stroke="2"
-            :gap="5"
-            color="#fff"
-            :open="hamburgerActive"
-          > </hamburger>
+        <div class="burger_menu" @click="handleHamburgerClick">
+          <hamburger :stroke="2" :gap="5" color="#fff" :open="hamburgerActive">
+          </hamburger>
         </div>
       </div>
     </div>
     <div class="d-md-none">
-      <div :class="{
+      <div
+        :class="{
           mobile_menu_inactive: !hamburgerActive,
           mobile_menu: hamburgerActive
-        }">
+        }"
+      >
         <ul
           class="nav-main nav-main-dark d-flex flex-column"
           @click="handleHamburgerClick"
         >
           <li class="nav-main-item">
-            <router-link
-              to="/"
-              class="nav-main-link"
-            >
+            <router-link to="/" class="nav-main-link">
               <i class="nav-main-link-icon fa fa-home"></i>
               <span class="nav-main-link-name nav-item">Home</span>
             </router-link>
@@ -120,17 +114,33 @@
             </router-link>
           </li>
           <li class="nav-main-item">
-            <router-link
-              to="/schedule"
-              class="nav-main-link "
-            >
+            <router-link to="/#" v-scroll-to="{
+                el: '#schedule',
+                duration: 500,
+                easing: 'ease',
+                offset: -75,
+                force: true,
+                cancelable: true,
+                x: false,
+                y: true
+              }" class="nav-main-link ">
               <i class="nav-main-link-icon far fa-clock"></i>
               <span class="nav-main-link-name nav-item ">Schedule</span>
             </router-link>
           </li>
           <li class="nav-main-item">
             <router-link
-              to="/committee"
+              to="/#"
+              v-scroll-to="{
+                el: '#committee',
+                duration: 500,
+                easing: 'ease',
+                offset: -75,
+                force: true,
+                cancelable: true,
+                x: false,
+                y: true
+              }"
               class="nav-main-link "
             >
               <i class="nav-main-link-icon fa fa-users"></i>
@@ -156,7 +166,7 @@
               <span class="nav-main-link-name nav-item ">Contact Us</span>
             </router-link>
           </li>
-          <li class="nav-main-item">
+          <!-- <li class="nav-main-item">
             <router-link
               to="/register"
               class="nav-main-link"
@@ -164,7 +174,7 @@
               <i class="nav-main-link-icon fab fa-wpforms"></i>
               <span class="nav-main-link-name nav-item ">Register</span>
             </router-link>
-          </li>
+          </li> -->
         </ul>
       </div>
     </div>
@@ -184,12 +194,11 @@
             width="40rem"
           />
         </div>
-        <ul class="nav-main nav-main-horizontal nav-main-horizontal-center nav-main-dark">
+        <ul
+          class="nav-main nav-main-horizontal nav-main-horizontal-center nav-main-dark"
+        >
           <li class="nav-main-item">
-            <router-link
-              to="/"
-              class="nav-main-link"
-            >
+            <router-link to="/" class="nav-main-link">
               <i class="nav-main-link-icon fa fa-home"></i>
               <span class="nav-main-link-name nav-item left">Home</span>
             </router-link>
@@ -216,7 +225,16 @@
           <li class="nav-main-item">
             <router-link
               to="#"
-              v-scroll-to="'#speakers'"
+              v-scroll-to="{
+                el: '#speakers',
+                duration: 500,
+                easing: 'ease',
+                offset: -65,
+                force: true,
+                cancelable: true,
+                x: false,
+                y: true
+              }"
               class="nav-main-link "
             >
               <i class="nav-main-link-icon fa fa-user-tie"></i>
@@ -239,13 +257,24 @@
               class="nav-main-link "
             >
               <i class="nav-main-link-icon far fa-newspaper "></i>
-              <span class="nav-main-link-name nav-item left">Call For Papers</span>
+              <span class="nav-main-link-name nav-item left"
+                >Call For Papers</span
+              >
             </router-link>
           </li>
           <li class="nav-main-item">
             <router-link
               to="#"
-              v-scroll-to="'#supported_by'"
+              v-scroll-to="{
+                el: '#supported_by',
+                duration: 500,
+                easing: 'ease',
+                offset: -65,
+                force: true,
+                cancelable: true,
+                x: false,
+                y: true
+              }"
               class="nav-main-link "
             >
               <i class="nav-main-link-icon fa fa-user-friends"></i>
@@ -253,17 +282,24 @@
             </router-link>
           </li>
           <li class="nav-main-item">
-            <router-link
-              to="/schedule"
-              class="nav-main-link "
-            >
+            <router-link to="/#" v-scroll-to="{
+                el: '#schedule',
+                duration: 500,
+                easing: 'ease',
+                offset: -65,
+                force: true,
+                cancelable: true,
+                x: false,
+                y: true
+              }" class="nav-main-link ">
               <i class="nav-main-link-icon far fa-clock"></i>
               <span class="nav-main-link-name nav-item left">Schedule</span>
             </router-link>
           </li>
           <li class="nav-main-item">
             <router-link
-              to="/committee"
+              to="/#"
+              v-scroll-to="'#committee'"
               class="nav-main-link "
             >
               <i class="nav-main-link-icon fa fa-users"></i>
@@ -277,7 +313,7 @@
                 el: '#contact_us',
                 duration: 500,
                 easing: 'ease',
-                offset: -75,
+                offset: -65,
                 force: true,
                 cancelable: true,
                 x: false,
@@ -289,7 +325,7 @@
               <span class="nav-main-link-name nav-item left">Contact Us</span>
             </router-link>
           </li>
-          <li class="nav-main-item">
+          <!-- <li class="nav-main-item">
             <router-link
               to="/register"
               class="nav-main-link"
@@ -297,7 +333,7 @@
               <i class="nav-main-link-icon fab fa-wpforms"></i>
               <span class="nav-main-link-name nav-item left">Register</span>
             </router-link>
-          </li>
+          </li> -->
         </ul>
       </div>
     </div>
@@ -305,31 +341,31 @@
 </template>
 <script>
 export default {
-  name: 'Navbar',
-  data () {
+  name: "Navbar",
+  data() {
     return {
       isTop: true,
       hamburgerActive: false
-    }
+    };
   },
   components: {},
-  mounted () {
-    window.addEventListener('scroll', this.handleScroll)
-    this.handleScroll()
+  mounted() {
+    window.addEventListener("scroll", this.handleScroll);
+    this.handleScroll();
   },
   methods: {
-    handleScroll (event) {
+    handleScroll(event) {
       if (window.scrollY === 0) {
-        this.isTop = true
+        this.isTop = true;
       } else {
-        this.isTop = false
+        this.isTop = false;
       }
     },
-    handleHamburgerClick () {
-      this.hamburgerActive = !this.hamburgerActive
+    handleHamburgerClick() {
+      this.hamburgerActive = !this.hamburgerActive;
     }
   }
-}
+};
 </script>
 <style lang="scss" scoped>
 .navbar {

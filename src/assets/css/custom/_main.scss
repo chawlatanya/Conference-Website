@@ -1,71 +1,114 @@
 //
 // Custom Main
 
+$font-family-sans-serif: Avenir,
+-apple-system,
+BlinkMacSystemFont,
+"Segoe UI",
+Roboto,
+"Helvetica Neue",
+Arial,
+Noto Sans,
+sans-serif,
+"Apple Color Emoji",
+"Segoe UI Emoji",
+"Segoe UI Symbol",
+"Noto Color Emoji";
+$font-family-header: Gilroy,
+-apple-system,
+BlinkMacSystemFont,
+"Segoe UI",
+Roboto,
+"Helvetica Neue",
+Arial,
+Noto Sans,
+sans-serif,
+"Apple Color Emoji",
+"Segoe UI Emoji",
+"Segoe UI Symbol",
+"Noto Color Emoji";
+
+body {
+  -webkit-font-smoothing: antialiased !important;
+  -moz-font-smoothing: antialiased !important;
+}
+
 @font-face {
   font-family: "Gilroy";
   font-display: swap;
-  src: url("/assets/font/gilroy-bold.otf") format("opentype");
+  src: url("../../assets/font/gilroy-bold.otf") format("opentype");
 }
 
 @font-face {
   font-family: "Avenir";
   font-display: swap;
-  src: url("/assets/font/avenir-heavy.otf") format("opentype");
+  src: url("../../assets/font/avenir-heavy.otf") format("opentype");
   font-weight: 600;
 }
 
-body {
-     font-family:Avenir,
-     -apple-system,
-     BlinkMacSystemFont,
-     Segoe UI,
-     Roboto,
-     Helvetica Neue,
-     Arial,
-     Noto Sans,
-     sans-serif,
-     Apple Color Emoji,
-     Segoe UI Emoji,
-     Segoe UI Symbol,
-     Noto Color Emoji !important;
-   -webkit-font-smoothing: antialiased !important;
-   -moz-font-smoothing: antialiased !important;
-   
+@font-face {
+  font-family: "Avenir";
+  font-display: swap;
+  src: url("../../assets/font/avenir-roman.otf") format("opentype");
+  font-weight: normal;
 }
-.btn{
-font-family: Avenir,
--apple-system,
-BlinkMacSystemFont,
-Segoe UI,
-Roboto,
-Helvetica Neue,
-Arial,
-Noto Sans,
-sans-serif,
-Apple Color Emoji,
-Segoe UI Emoji,
-Segoe UI Symbol,
-Noto Color Emoji!important;
-display: inline-block;
-font-weight: 600;
-color: #3e4c59;
-text-align: center;
-vertical-align: middle;
--webkit-user-select: none;
--moz-user-select: none;
--ms-user-select: none;
-user-select: none;
-background-color: transparent;
-border: 1px solid transparent;
-padding: .8rem 2.75rem !important;
-font-size: .875rem !important;
-line-height: 1.5 !important;
-border-radius: .12rem !important;
--webkit-transition: color .15s ease-in-out !important,
-background-color .15s ease-in-out !important,
-border-color .15s ease-in-out !important,
-box-shadow .15s ease-in-out !important;
-transition: color .15s ease-in-out !important,
-border-color .15s ease-in-out !important,
+
+body {
+  -webkit-font-smoothing: antialiased !important;
+  -moz-font-smoothing: antialiased !important;
+  font-family: $font-family-sans-serif;
+}
+
+h1,
+.h1,
+h2,
+.h2,
+h3,
+.h3,
+h4,
+.h4,
+h5,
+.h5,
+h6,
+.h6,
+.font-gilroy {
+  font-family: $font-family-header;
+}
+
+.btn {
+  font-family: Avenir,
+    -apple-system,
+    BlinkMacSystemFont,
+    Segoe UI,
+    Roboto,
+    Helvetica Neue,
+    Arial,
+    Noto Sans,
+    sans-serif,
+    Apple Color Emoji,
+    Segoe UI Emoji,
+    Segoe UI Symbol,
+    Noto Color Emoji !important;
+  display: inline-block;
+  font-weight: 600;
+  color: #3e4c59;
+  text-align: center;
+  vertical-align: middle;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  background-color: transparent;
+  border: 1px solid transparent;
+  padding: .8rem 2.75rem !important;
+  font-size: .875rem !important;
+  line-height: 1.5 !important;
+  border-radius: .12rem !important;
+  -webkit-transition: color .15s ease-in-out !important,
+    background-color .15s ease-in-out !important,
+    border-color .15s ease-in-out !important,
+    box-shadow .15s ease-in-out !important;
+  transition: color .15s ease-in-out !important,
+    border-color .15s ease-in-out !important,
 
 }

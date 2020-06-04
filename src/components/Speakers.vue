@@ -1,142 +1,126 @@
 <template>
-  <div>
-    <h1 style="text-align:center;">KEYNOTE SPEAKERS</h1>
-    <div class="slideshow-container ">
-      <div class="mySlides fade ">
-        <div class="d-flex flex-row justify-content-around">
-          <!-- <img
-            src="../assets/images/Satoshi.jpg"
-             width="200rem" height="200rem"
-          /> -->
-          <div
-            class="card"
-            style="width: 18rem;"
-          >
-           <img class="" src="../assets/images/Satoshi.jpg"  alt="Card image cap">
-            <div class="card-body  d-flex flex-column justify-content-center">
-              <h5 class="card-title">Dr. Satoshi Nakamura</h5>
-              <p class="card-text text-muted"> Professor of Nara Institute of Science and Technology (NAIST)</p>
-            </div>
-          </div>
-        </div>
-
+  <div class="d-md-flex">
+    <div class="left d-md-block d-none col-md-6 d-flex flex-column">
+      <div class="pl-3 pt-md-0 pt-3">
+        <h1>Keynote Speakers</h1>
       </div>
-
-      <div class="mySlides fade">
-        <div class="d-flex flex-row justify-content-around">
-          <!-- <img
-            src="../assets/images/barbara.jpg"
-            width="200rem" height="200rem"
-          /> -->
-          <div
-            class="card"
-            style="width: 18rem;"
-          >
-           <img class=""
-            src="../assets/images/barbara.jpg"
-
-          />
-            <div class="card-body d-flex flex-column justify-content-center">
-              <h5 class="card-title">Dr. Barbara Zitova</h5>
-              <p class="card-text text-muted">Institute of Information Theory and Automation of the ASCR</p>
-            </div>
-          </div>
-        </div>
+      <div class="image-speaker d-md-block d-none">
+        <img class="img-fluid" src="../assets/images/speaker.svg" />
       </div>
-
-      <div class="mySlides fade">
-        <div class="d-flex flex-row justify-content-around">
-          <!-- <img
-            src="../assets/images/nemeth.jpg"
-             width="200rem" height="200rem"
-          /> -->
-          <div
-            class="card"
-            style="width: 18rem;"
-          >
-          <img
-            src="../assets/images/nemeth.jpg"
-
-          />
-            <div class="card-body  d-flex flex-column justify-content-center">
-              <h5 class="card-title">Prof. Nemeth Geza</h5>
-              <p class="card-text text-muted">Budapest University of Technology and Economics</p>
-            </div>
-          </div>
-        </div>
-
-      </div>
-
-      <a
-        class="prev "
-        @click="plusSlides(-1)"
-      >&#10094;</a>
-      <a
-        class="next"
-        @click="plusSlides(1)"
-      >&#10095;</a>
     </div>
-    <br />
+    <div class="slideshow col-12 col-md-6 mt-md-6">
+      <div class="slideshow-container">
+        <div class="mySlides fade ">
+          <div class="d-flex flex-row justify-content-around">
+            <div class="card" style="width: 18rem;">
+              <img
+                class=""
+                src="../assets/images/Satoshi.jpg"
+                alt="Card image cap"
+              />
+              <div class="card-body  d-flex flex-column justify-content-center">
+                <h5 class="card-title">Dr. Satoshi Nakamura</h5>
+                <p class="card-text text-muted">
+                  Professor of Nara Institute of Science and Technology (NAIST)
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
 
-    <div style="text-align:center">
-      <span
-        class="dot"
-        @click="currentSlide(1)"
-      ></span>
-      <span
-        class="dot"
-        @click="currentSlide(2)"
-      ></span>
-      <span
-        class="dot"
-        @click="currentSlide(3)"
-      ></span>
+        <div class="mySlides fade">
+          <div class="d-flex flex-row justify-content-around">
+            <div class="card" style="width: 18rem;">
+              <img class="" src="../assets/images/barbara.jpg" />
+              <div class="card-body d-flex flex-column justify-content-center">
+                <h5 class="card-title">Dr. Barbara Zitova</h5>
+                <p class="card-text text-muted">
+                  Institute of Information Theory and Automation of the ASCR
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="mySlides fade">
+          <div class="d-flex flex-row justify-content-around">
+            <div class="card" style="width: 18rem;">
+              <img src="../assets/images/nemeth.jpg" />
+              <div class="card-body  d-flex flex-column justify-content-center">
+                <h5 class="card-title">Prof. Nemeth Geza</h5>
+                <p class="card-text text-muted">
+                  Budapest University of Technology and Economics
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <a class="prev rounded-circle bg-white" @click="plusSlides(-1)">
+          <div class="font-size-sm">
+            <img src="../assets/images/arrow_back.svg" />
+          </div>
+        </a>
+        <a class="next rounded-circle bg-white " @click="plusSlides(1)">
+          <div class="font-size-sm">
+            <img src="../assets/images/arrow_next.svg" />
+          </div>
+        </a>
+      </div>
+      <br />
+      <div style="text-align:center">
+        <span class="dot" @click="currentSlide(1)"></span>
+        <span class="dot" @click="currentSlide(2)"></span>
+        <span class="dot" @click="currentSlide(3)"></span>
+      </div>
     </div>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'Slider',
-  data () {
+  name: "Slider",
+  data() {
     return {
       slideIndex: 1
-    }
+    };
   },
-  mounted () {
-    this.showSlides(this.slideIndex)
+
+  mounted() {
+    this.showSlides(this.slideIndex);
   },
   methods: {
-    plusSlides (n) {
-
-      this.showSlides((this.slideIndex += n))
+    plusSlides(n) {
+      console.log('------------------------------------');
+      console.log("calls");
+      console.log('------------------------------------');
+      this.showSlides((this.slideIndex += n));
     },
-    currentSlide (n) {
-      this.slideIndex = n
-      this.showSlides(n)
+    currentSlide(n) {
+      this.slideIndex = n;
+      this.showSlides(n);
     },
-    showSlides (n) {
-      var i
-      var slides = document.getElementsByClassName('mySlides')
-      var dots = document.getElementsByClassName('dot')
+    showSlides(n) {
+      var i;
+      var slides = document.getElementsByClassName("mySlides");
+      var dots = document.getElementsByClassName("dot");
       if (n > slides.length) {
-        this.slideIndex = 1
+        this.slideIndex = 1;
       }
       if (n < 1) {
-        this.slideIndex = slides.length
+        this.slideIndex = slides.length;
       }
       for (i = 0; i < slides.length; i++) {
-        slides[i].style.display = 'none'
+        slides[i].style.display = "none";
       }
       for (i = 0; i < dots.length; i++) {
-        dots[i].className = dots[i].className.replace('active', '')
+        dots[i].className = dots[i].className.replace("active", "");
       }
-      slides[this.slideIndex - 1].style.display = 'block'
+      slides[this.slideIndex - 1].style.display = "block";
 
-      dots[this.slideIndex - 1].className += ' active'
+      dots[this.slideIndex - 1].className += " active";
     }
   }
-}
+};
 </script>
 
 <style scoped>
@@ -163,7 +147,7 @@ img {
 .next {
   cursor: pointer;
   position: absolute;
-  top: 50%;
+  top: 45%;
   width: auto;
   padding: 16px;
   margin-top: -22px;
@@ -173,12 +157,25 @@ img {
   transition: 0.6s ease;
   border-radius: 0 3px 3px 0;
   user-select: none;
+  box-shadow: 0 7px 14px rgba(50, 50, 93, 0.1), 0 3px 6px rgba(0, 0, 0, 0.08);
 }
 
 /* Position the "next button" to the right */
 .next {
-  right: 0;
-  border-radius: 3px 0 0 3px;
+  right: 19%;
+}
+.prev {
+  left: 19%;
+}
+@media screen and (max-width: 600px) {
+  .next {
+    right: -4%;
+   
+  }
+  .prev {
+    left: -4%;
+    
+  }
 }
 
 /* On hover, add a black background color with a little bit see-through */
@@ -259,7 +256,7 @@ img {
     font-size: 11px;
   }
 }
-.card img{
+.card img {
   height: 15rem;
 }
 </style>
