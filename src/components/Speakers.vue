@@ -90,9 +90,6 @@ export default {
   },
   methods: {
     plusSlides(n) {
-      console.log('------------------------------------');
-      console.log("calls");
-      console.log('------------------------------------');
       this.showSlides((this.slideIndex += n));
     },
     currentSlide(n) {
