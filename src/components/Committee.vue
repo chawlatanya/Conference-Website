@@ -123,7 +123,7 @@
           </div>
         </div>
       </div>
-      <div class="col-md-6 d-none d-md-block ">
+      <div class="col-md-6 mt-7 d-none d-md-block ">
         <img
           class="product_image pl-4 img-fluid"
           src="../assets/images/committee.svg"
